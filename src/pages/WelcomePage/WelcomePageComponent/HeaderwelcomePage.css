@@ -1,39 +1,84 @@
-
-
 .header {
   position: fixed; /* Fixa no topo da tela */
   top: 0;
   left: 0;
   width: 100%;
-  height: 70px;
-  background-color: white; /* Azul padrão moderno */
+  background-color: white; /* fundo branco */
   display: flex;
   justify-content: flex-end;
-  align-items: center;
-  padding: 0 40px;
+  align-items: center;  
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   z-index: 1000;
+  /* Use box-sizing para que padding não estoure a largura */
+  box-sizing: border-box;
+  padding: 10px 25px 20px 16px;
+  overflow: hidden; /* evita overflow indesejado do header */
 }
 
 /* Container do menu */
+/* Container do menu */
+.button-enter nav {
+  max-width: 100%;
+  overflow-x: auto; /* permite scroll horizontal se necessário em telas muito pequenas */
+}
+
 .button-enter nav ul {
   display: flex;
   list-style: none;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  font-size: 16px;
   margin: 0;
   padding: 0;
-  gap: 24px;
+  flex-wrap: wrap; /* permite quebrar em várias linhas quando faltar espaço */
+}
+
+.button-enter nav ul li {
+  margin: 0;
 }
 
 /* Links */
+/* Links */
 .button-enter nav ul li a {
-  text-decoration: none;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 10px 20px; /* padding menor por padrão para caber em telas pequenas */
   color: black;
-  font-weight: 500;
-  font-size: 1rem;
-  transition: color 0.2s, transform 0.2s;
+  display: inline-block;
+  text-decoration: none;
+  white-space: nowrap; /* evita quebra no texto do link */
 }
 
 .button-enter nav ul li a:hover {
   color: #ffde59; /* Dourado suave */
   transform: translateY(-2px);
+}
+
+/* Aumenta espaçamento em telas maiores para preservar o visual original */
+@media (min-width: 1024px) {
+  .button-enter nav ul {
+    gap: 50px;
+  }
+
+  .button-enter nav ul li a {
+    padding: 10px 45px; /* volta ao padding maior em desktop */
+  }
+}
+
+/* Ajustes em telas muito pequenas */
+@media (max-width: 420px) {
+  .header {
+    padding: 8px 12px 12px 12px;
+  }
+
+  .button-enter nav ul {
+    gap: 8px;
+  }
+
+  .button-enter nav ul li a {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
 }
