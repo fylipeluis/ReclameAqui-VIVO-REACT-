@@ -1,17 +1,23 @@
-import { Link } from 'react-router-dom'
-import './HeaderwelcomePage.css'
+import { Link } from "react-router-dom";
+import "./HeaderwelcomePage.css";
+import { LogoHeaderWelcomeScreen } from "./LogoHeaderWelcomePage";
 
 export function HeaderWelcomePage() {
-    return (
-        <section className="header">
-        <div className="button-enter">
+  return (
+    <section className="header">
+      <LogoHeaderWelcomeScreen />
+      <div className="button-enter">
         <nav>
-            <ul>
-                <li><Link to="./login">Entrar</Link></li>
-                <li><Link to="./cadastro" >Cadastre-se</Link></li>
-            </ul>
+          <ul>
+            <li>
+              <Link to="./login">Entrar</Link>
+            </li>
+            <li>
+              <Link to="./cadastro">Cadastre-se</Link>
+            </li>
+          </ul>
         </nav>
-    </div>
+      </div>
     </section>
-    )
+  );
 }

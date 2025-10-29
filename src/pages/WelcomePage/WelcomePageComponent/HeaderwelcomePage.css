@@ -1,25 +1,22 @@
 .header {
-  position: fixed; /* Fixa no topo da tela */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: white; /* fundo branco */
+  background-color: white;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;  
+  justify-content: space-between;
+  align-items: center;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   z-index: 1000;
-  /* Use box-sizing para que padding não estoure a largura */
   box-sizing: border-box;
   padding: 10px 25px 20px 16px;
-  overflow: hidden; /* evita overflow indesejado do header */
+  overflow: hidden;
 }
 
-/* Container do menu */
-/* Container do menu */
 .button-enter nav {
   max-width: 100%;
-  overflow-x: auto; /* permite scroll horizontal se necessário em telas muito pequenas */
+  overflow-x: auto;
 }
 
 .button-enter nav ul {
@@ -32,42 +29,37 @@
   font-size: 16px;
   margin: 0;
   padding: 0;
-  flex-wrap: wrap; /* permite quebrar em várias linhas quando faltar espaço */
+  flex-wrap: wrap;
 }
 
 .button-enter nav ul li {
   margin: 0;
 }
 
-/* Links */
-/* Links */
 .button-enter nav ul li a {
   border: 1px solid black;
   border-radius: 15px;
-  padding: 10px 20px; /* padding menor por padrão para caber em telas pequenas */
-  color: black;
+  padding: 10px 20px;
+  color: rgb(104, 43, 139);
   display: inline-block;
   text-decoration: none;
-  white-space: nowrap; /* evita quebra no texto do link */
+  white-space: nowrap;
 }
 
 .button-enter nav ul li a:hover {
-  color: #ffde59; /* Dourado suave */
-  transform: translateY(-2px);
+  color: #ffde59;
 }
 
-/* Aumenta espaçamento em telas maiores para preservar o visual original */
 @media (min-width: 1024px) {
   .button-enter nav ul {
     gap: 50px;
   }
 
   .button-enter nav ul li a {
-    padding: 10px 45px; /* volta ao padding maior em desktop */
+    padding: 10px 45px;
   }
 }
 
-/* Ajustes em telas muito pequenas */
 @media (max-width: 420px) {
   .header {
     padding: 8px 12px 12px 12px;

@@ -1,0 +1,17 @@
+.header-log {
+  display: flex;
+  align-items: center;
+  padding-left: 8px;
+}
+
+.header-log img {
+  height: 44px;
+  width: auto;
+  display: block;
+}
+
+@media (max-width: 420px) {
+  .header-log img {
+    height: 36px;
+  }
+}
