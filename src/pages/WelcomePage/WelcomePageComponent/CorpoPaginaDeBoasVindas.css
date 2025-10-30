@@ -1,47 +1,60 @@
-body {
-    font-family: 'Montserrat', sans-serif;
-    background-image: url(../../../assets/imgs/propagandaBoasVindas.png);
-    background-size: cover;
+.corpo-wrapper {
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  z-index: 0;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.corpo-wrapper::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("../../../assets/imgs/propagandaBoasVindas.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
 }
 
 .texto-principal {
-    display: flex;
-    flex-wrap: wrap;
-    text-align: justify;
-    align-items: flex-start;
-    justify-content: flex-start;
-    color: white;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: justify;
+  align-items: flex-start;
+  justify-content: flex-start;
+  color: white;
 }
 
 .texto-principal h1 {
-    width: 360px;
-    height: 50px;
-    padding-top: 90px;
-    padding-left: 170px;
-    font-size: 30px;
+  width: 360px;
+  height: 50px;
+  padding-top: 90px;
+  padding-left: 170px;
+  font-size: 30px;
 }
 
 .balao {
-    display:flex;
-    width: 400px;
-    height: 120px;
-    margin-top:20px;
-    margin-left: 500px;
-    background: rgb(249, 248, 250);
-    border-radius: 10px;
+  display: flex;
+  width: 400px;
+  height: 120px;
+  margin-top: 20px;
+  margin-left: 500px;
+  background: rgb(249, 248, 250);
+  border-radius: 10px;
 }
 
-.boneco-vivo{
-    width: 50px;
-    height: 50px;
+.boneco-vivo {
+  width: 50px;
+  height: 50px;
 }
 
 .balao p {
-    width:290px;
-    height: 77px;
-    color: rgb(0, 0, 0);
+  width: 290px;
+  height: 77px;
+  color: rgb(0, 0, 0);
 
-    text-align: center;
-    justify-content: center;
-    padding-top: -15px;
+  text-align: center;
+  justify-content: center;
+  padding-top: -15px;
 }
