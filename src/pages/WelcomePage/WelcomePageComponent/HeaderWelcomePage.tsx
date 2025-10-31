@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import "./HeaderwelcomePage.css";
-import { LogoHeaderWelcomeScreen } from "./LogoHeaderWelcomePage";
+import { LogoHeader } from "../../ComponentesGlobais/LogoHeader";
 
 export function HeaderWelcomePage() {
   return (
     <section className="header">
-      <LogoHeaderWelcomeScreen />
+      <LogoHeader />
       <div className="button-enter">
         <nav>
           <ul>
