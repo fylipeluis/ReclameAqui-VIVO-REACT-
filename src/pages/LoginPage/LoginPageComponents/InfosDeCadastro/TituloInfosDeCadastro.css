@@ -1,54 +1,50 @@
-/* Reset básico para evitar diferenças entre HTML puro e React */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-#person {
+#person,
+.person {
   display: flex;
-  background-color: #fff;
-
-  /* Ajuste mais consistente para ocupar a tela */
+  background-color: #ffffff;
   width: 100vw;
   height: 100vh;
-
-  border-radius: 10px;
   overflow: hidden;
-
-  /* Sombra mais suave e profissional */
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
 }
 
 .person-content {
+  width: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-
-  padding: 20px;
-  width: 100%;
-  height: 100%;
+  padding: 40px 20px;
+  gap: 2px;
 }
 
-/* Título */
-.person-content h1 {
-  font-size: 2.4rem;
-  font-weight: 700;
+.title-login {
   text-align: center;
-  line-height: 1.3;
-  color: #7e0a8d;
-  margin-bottom: 25px;
+  margin-top: 45px; 
+  margin-bottom: 20px;
 }
 
-.person-content h1 span {
-  display: block;
+.title-login h1 {
+  text-align: center;
+  font-size: 26px;
+  line-height: 1.15;
+  color: #7e0a8d;
+  font-weight: 700;
+}
+
+.title-login h1 span {
   color: #7e0a8d;
 }
 
-/* Subtítulo */
-.subtitle-login {
-  font-size: 1.15rem;
-  color: #555;
+
+.subtitle-login h2 {
+  font-size: 1.1rem;
+  margin-top: 10px;
+  color: #535353;
   margin-bottom: 20px;
 }
