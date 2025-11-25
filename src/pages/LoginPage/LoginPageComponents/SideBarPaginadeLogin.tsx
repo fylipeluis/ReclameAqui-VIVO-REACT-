@@ -1,5 +1,5 @@
 import sidebar from "../../../assets/imgs/imgLogin.jpg";
-import "./SideBarPaginaDeLogin.css";
+import "./SideBarPaginadeLogin.css";
 
 export function SideBarPaginaDeLogin() {
   return (
