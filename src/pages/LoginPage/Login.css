@@ -1,0 +1,17 @@
+.login-page {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.left-side {
+  width: 50%;
+  min-height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 40px 24px;
+  box-sizing: border-box;
+}
